@@ -1,0 +1,32 @@
+/* The Color Options */
+.highlight-yellow { background-color: #ffd54f; color: #000; border-radius: 2px; cursor: pointer; }
+.highlight-green { background-color: #81c784; color: #000; border-radius: 2px; cursor: pointer; }
+.highlight-pink { background-color: #f48fb1; color: #000; border-radius: 2px; cursor: pointer; }
+.highlight-blue { background-color: #64b5f6; color: #000; border-radius: 2px; cursor: pointer; }
+
+/* The Floating Menu UI */
+#mvp-highlighter-menu {
+    position: absolute;
+    z-index: 2147483647; /* Maximum possible z-index to stay above everything */
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 6px;
+    display: none; /* Hidden by default */
+    gap: 8px;
+}
+
+/* The Color Buttons inside the Menu */
+.color-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "MVP Highlighter",
+  "version": "1.0",
+  "description": "Highlight and save text on any page.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
