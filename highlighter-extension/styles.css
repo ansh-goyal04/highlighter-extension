@@ -4,7 +4,6 @@
 .highlight-pink { background-color: #f48fb1; color: #000; border-radius: 2px; cursor: pointer; }
 .highlight-blue { background-color: #64b5f6; color: #000; border-radius: 2px; cursor: pointer; }
 
-/* The Floating Menu UI */
 #mvp-highlighter-menu {
     position: absolute;
     z-index: 2147483647; /* Maximum possible z-index to stay above everything */
@@ -30,3 +29,36 @@
 .color-btn:hover {
     transform: scale(1.1);
 }
+
+
+/* --- CUSTOM NOTIFICATION TOAST --- */
+.mvp-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #2c3e50; /* Sleek dark mode background */
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 2147483647; /* Stay above absolutely everything */
+    
+    /* Animation defaults */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; /* Let users click through it if needed */
+}
+
+/* The class we add in JS to trigger the slide-in */
+.mvp-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Color accents based on success or error */
+.mvp-toast.success { border-left: 5px solid #2ecc71; } /* Green */
+.mvp-toast.error { border-left: 5px solid #e74c3c; } /* Red */
